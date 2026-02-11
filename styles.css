@@ -129,10 +129,55 @@ strong {
   color: var(--color-white);
 }
 
+.section-parallax {
+  background-image: url('https://www.dropbox.com/scl/fi/9bji90x5ukejhrzi2xug7/ai-roadmap-workshop-background-min.png?rlkey=z36b1y3pr8ec5mj42ig5xn8zx&raw=1');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.section-parallax::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.92);
+  z-index: 0;
+}
+
+.section-parallax .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-parallax h2 {
+  color: var(--color-cobalt);
+}
+
 .section-blue .step-card,
 .section-blue .pricing-card,
 .section-blue .value-anchor {
   /* Keep white cards on blue background */
+}
+
+.section-blue .step-card h3,
+.section-blue .step-card p {
+  color: var(--color-black);
+}
+
+.section-blue .pricing-card p,
+.section-blue .pricing-card .price,
+.section-blue .pricing-card .price-detail,
+.section-blue .pricing-card .price-includes {
+  color: var(--color-black);
+}
+
+.section-blue .value-anchor p {
+  color: var(--color-black);
 }
 
 .section-intro {
