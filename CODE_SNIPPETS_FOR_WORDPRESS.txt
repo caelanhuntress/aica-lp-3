@@ -1,0 +1,349 @@
+=================================================================
+COPY-PASTE CODE SNIPPETS FOR WORDPRESS SEO IMPLEMENTATION
+=================================================================
+
+This file contains all the code you need to copy and paste.
+Each section is labeled clearly.
+
+-----------------------------------------------------------------
+1. GEOGRAPHIC META TAGS
+-----------------------------------------------------------------
+Location: Settings → Insert Headers and Footers → Scripts in Header
+
+COPY EVERYTHING BELOW (including comments):
+
+<!-- Geographic Meta Tags for NZ SEO -->
+<meta name="geo.region" content="NZ" />
+<meta name="geo.placename" content="New Zealand" />
+<meta name="geo.position" content="-41.2865;174.7762" />
+<meta name="ICBM" content="-41.2865, 174.7762" />
+
+
+-----------------------------------------------------------------
+2. ENHANCED SCHEMA MARKUP (LocalBusiness + Service)
+-----------------------------------------------------------------
+Location: Snippets → Add New (Code Snippets plugin)
+- Title: Enhanced Schema - AI Workshop NZ
+- Code Type: PHP Snippet
+
+COPY EVERYTHING BELOW:
+
+<?php
+add_action('wp_footer', function() {
+    if (is_page('ai-roadmap-workshop') || is_page('roadmap')) {
+        ?>
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "AI Coaching Academy",
+          "description": "AI Roadmap Workshop - AI implementation and planning workshops for New Zealand SMEs",
+          "telephone": "+64 27 575 1345",
+          "email": "caelan@ai-coaching.academy",
+          "url": "https://join.ai-coaching.academy/roadmap/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "NZ",
+            "addressRegion": "New Zealand"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-41.2865",
+            "longitude": "174.7762"
+          },
+          "areaServed": [
+            {"@type": "City", "name": "Auckland"},
+            {"@type": "City", "name": "Wellington"},
+            {"@type": "City", "name": "Christchurch"},
+            {"@type": "City", "name": "Hamilton"},
+            {"@type": "Country", "name": "New Zealand"}
+          ],
+          "priceRange": "$$",
+          "serviceType": "AI Planning Workshop, AI Implementation Consulting, AI Strategy",
+          "knowsAbout": ["AI Implementation", "AI Strategy", "Business AI Adoption", "AI Workshops", "AI Consulting"]
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "AI Planning Workshop",
+          "provider": {
+            "@type": "Organization",
+            "name": "AI Coaching Academy",
+            "url": "https://join.ai-coaching.academy"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "New Zealand"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "1500",
+            "priceCurrency": "NZD",
+            "description": "AI Roadmap Workshop for up to 15 participants",
+            "availability": "https://schema.org/InStock"
+          },
+          "description": "2-hour AI planning workshop for New Zealand businesses. Identify 5-8 high-value AI opportunities with ROI projections and implementation roadmap."
+        }
+        </script>
+
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://join.ai-coaching.academy/"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AI Roadmap Workshop NZ",
+            "item": "https://join.ai-coaching.academy/roadmap/"
+          }]
+        }
+        </script>
+        <?php
+    }
+}, 99);
+
+
+-----------------------------------------------------------------
+3. SEO TITLE TAG
+-----------------------------------------------------------------
+Location: Edit Page → Yoast SEO → SEO Title field
+
+COPY THIS:
+
+AI Planning Workshop NZ | AI Implementation New Zealand | AI Coaching Academy
+
+
+ALTERNATIVE (if first is too long):
+
+AI Planning Workshop New Zealand | AI Strategy Consulting NZ
+
+
+-----------------------------------------------------------------
+4. META DESCRIPTION
+-----------------------------------------------------------------
+Location: Edit Page → Yoast SEO → Meta Description field
+
+COPY THIS:
+
+AI planning workshop NZ for SMEs. Get an AI implementation roadmap with ROI projections in 2 hours. New Zealand AI strategy consulting for business teams. From $1,500 for up to 15 participants.
+
+
+-----------------------------------------------------------------
+5. H1 HEADING
+-----------------------------------------------------------------
+Location: Edit Page → Main heading at top
+
+OPTION 1 (Recommended):
+
+AI Planning Workshop New Zealand
+Stop Guessing Where AI Fits in Your Business
+
+
+OPTION 2:
+
+New Zealand AI Implementation Strategy
+Plan Your AI Roadmap in 2 Hours
+
+
+-----------------------------------------------------------------
+6. HERO SUBTITLE
+-----------------------------------------------------------------
+Location: Edit Page → Paragraph under H1
+
+COPY THIS:
+
+AI implementation workshop for New Zealand businesses. In just 2 hours, your leadership team identifies 5-8 high-value AI opportunities — prioritized by ROI, with a concrete implementation plan.
+
+
+-----------------------------------------------------------------
+7. LOCATION SECTION - MAIN HEADING
+-----------------------------------------------------------------
+Location: Add new section after hero
+
+H2 HEADING:
+
+AI Implementation Consulting Across New Zealand
+
+
+INTRO PARAGRAPH:
+
+We work with SMEs throughout New Zealand — from Auckland to Wellington, Christchurch to Hamilton. Whether you're looking for AI strategy consulting in Auckland, AI implementation support in Wellington, or AI planning workshops anywhere in NZ, we deliver results remotely or in-person.
+
+
+-----------------------------------------------------------------
+8. LOCATION SECTION - 3 COLUMNS
+-----------------------------------------------------------------
+
+COLUMN 1:
+---------
+H3: AI Workshops Auckland
+
+Paragraph: In-person and remote AI planning workshops for Auckland businesses
+
+
+COLUMN 2:
+---------
+H3: AI Strategy Wellington
+
+Paragraph: AI roadmap development and implementation consulting in Wellington
+
+
+COLUMN 3:
+---------
+H3: AI Consulting NZ-Wide
+
+Paragraph: Remote AI workshops for teams across Christchurch, Hamilton, Tauranga, and all NZ regions
+
+
+-----------------------------------------------------------------
+9. FAQ ITEMS - NZ SPECIFIC
+-----------------------------------------------------------------
+
+FAQ 1:
+------
+Question: Do you run AI workshops throughout New Zealand?
+
+Answer: Yes! We deliver AI planning workshops across New Zealand — Auckland, Wellington, Christchurch, Hamilton, and beyond. Sessions can be run in-person or remotely via Zoom, depending on your location and preference.
+
+
+FAQ 2:
+------
+Question: What makes this different from other AI consulting in NZ?
+
+Answer: Unlike generic AI training, this workshop is a working session specific to your New Zealand business. You'll walk away with a concrete AI implementation plan, not just theory. We focus on practical AI tools and strategies that work for NZ SMEs.
+
+
+FAQ 3:
+------
+Question: Is the pricing in NZD?
+
+Answer: Yes, all pricing is in New Zealand dollars (NZD) plus GST. The AI Roadmap Workshop is $1,500 NZD + GST for up to 15 participants.
+
+
+-----------------------------------------------------------------
+10. TRUST STRIP TEXT UPDATE
+-----------------------------------------------------------------
+Location: Find "Trusted by SME teams across New Zealand"
+
+CHANGE TO:
+
+Trusted by SME teams across Auckland, Wellington & all NZ
+
+
+-----------------------------------------------------------------
+11. ABOUT SECTION - UPDATED BIO
+-----------------------------------------------------------------
+Location: About Caelan section → First paragraph
+
+REPLACE WITH:
+
+Caelan Huntress is the founder of AI Coaching Academy. With over a decade of helping New Zealand businesses work smarter with technology, he's facilitated AI planning workshops and implementation projects for teams across Auckland, Wellington, Christchurch — from professional services firms to logistics companies to creative agencies.
+
+
+-----------------------------------------------------------------
+12. IMAGE ALT TEXT
+-----------------------------------------------------------------
+
+Main Workshop Image:
+--------------------
+Caelan Huntress AI workshop facilitator speaking at New Zealand AI implementation workshop
+
+
+Headshot Image:
+---------------
+Caelan Huntress - AI implementation consultant and workshop facilitator New Zealand
+
+
+Any Map/Location Images:
+------------------------
+AI coaching academy service locations across New Zealand including Auckland Wellington Christchurch
+
+
+-----------------------------------------------------------------
+13. YOAST SEO SETTINGS (Focus Keyword)
+-----------------------------------------------------------------
+Location: Edit Page → Yoast SEO → Focus Keyphrase
+
+PRIMARY FOCUS KEYWORD:
+
+AI planning workshop NZ
+
+
+ADDITIONAL KEYWORDS (if your SEO plugin supports it):
+
+AI implementation New Zealand
+AI strategy Auckland
+AI consulting Wellington
+New Zealand AI workshop
+
+
+-----------------------------------------------------------------
+14. CANONICAL URL
+-----------------------------------------------------------------
+Location: Edit Page → Yoast SEO → Advanced → Canonical URL
+
+SET TO:
+
+https://join.ai-coaching.academy/roadmap/
+
+
+-----------------------------------------------------------------
+15. OPEN GRAPH SETTINGS (Social Media)
+-----------------------------------------------------------------
+Location: Edit Page → Yoast SEO → Social
+
+FACEBOOK/OG TITLE:
+
+AI Planning Workshop NZ | Get Your AI Implementation Roadmap
+
+
+FACEBOOK/OG DESCRIPTION:
+
+2-hour AI workshop for New Zealand businesses. Identify your top AI opportunities with ROI projections. Serving Auckland, Wellington, Christchurch & all NZ.
+
+
+TWITTER TITLE (same as OG):
+
+AI Planning Workshop NZ | Get Your AI Implementation Roadmap
+
+
+TWITTER DESCRIPTION (same as OG):
+
+2-hour AI workshop for New Zealand businesses. Identify your top AI opportunities with ROI projections. Serving Auckland, Wellington, Christchurch & all NZ.
+
+
+-----------------------------------------------------------------
+END OF CODE SNIPPETS
+-----------------------------------------------------------------
+
+IMPORTANT NOTES:
+
+1. When pasting PHP code (Schema Markup), make sure:
+   - Code Snippets plugin is installed
+   - You select "PHP Snippet" as the type
+   - You click "Save and Activate"
+
+2. When pasting HTML code (Geographic Meta Tags), make sure:
+   - Insert Headers and Footers plugin is installed
+   - You paste in "Scripts in Header" section
+   - You click "Save"
+
+3. Test everything after implementation:
+   - View page source (Ctrl+U)
+   - Search for "geo.region" - should find it
+   - Search for "areaServed" - should find it
+   - Use https://validator.schema.org/ to validate
+
+4. Clear cache after all changes:
+   - WordPress cache
+   - Browser cache (Ctrl+Shift+R)
+
+=================================================================
