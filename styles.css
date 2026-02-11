@@ -113,6 +113,28 @@ strong {
   background-color: var(--color-platinum);
 }
 
+.section-blue {
+  background: var(--color-cobalt);
+}
+
+.section-blue h2 {
+  color: var(--color-white);
+}
+
+.section-blue .section-intro {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section-blue p {
+  color: var(--color-white);
+}
+
+.section-blue .step-card,
+.section-blue .pricing-card,
+.section-blue .value-anchor {
+  /* Keep white cards on blue background */
+}
+
 .section-intro {
   font-size: 1.2rem;
   max-width: 720px;
@@ -310,6 +332,10 @@ strong {
 }
 
 /* ---------- Problem Section ---------- */
+#problem h2 {
+  text-align: center;
+}
+
 .problem-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -322,6 +348,7 @@ strong {
   border-radius: var(--radius);
   padding: 32px;
   box-shadow: var(--shadow-sm);
+  text-align: left;
 }
 
 .problem-icon {
@@ -336,10 +363,12 @@ strong {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 12px;
+  margin-right: 0;
 }
 
 .problem-card p {
   margin-bottom: 0;
+  text-align: left;
 }
 
 /* ---------- Solution / Check List ---------- */
@@ -360,11 +389,23 @@ strong {
   max-width: 720px;
 }
 
+.check-list-two-column {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 3rem;
+}
+
 .check-item {
   display: flex;
   gap: 16px;
   align-items: flex-start;
   margin-bottom: 1.25rem;
+}
+
+.check-list-two-column .check-item {
+  margin-bottom: 0;
 }
 
 .check-icon {
@@ -466,6 +507,16 @@ strong {
 }
 
 /* ---------- Who Should Attend ---------- */
+#who h2 {
+  text-align: center;
+}
+
+#who .section-intro {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .audience-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
