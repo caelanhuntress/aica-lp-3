@@ -134,8 +134,9 @@ strong {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% auto;
   position: relative;
+  background-color: #1C1018;
 }
 
 .section-parallax::before {
@@ -145,7 +146,7 @@ strong {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(28, 16, 24, 0.3);
   z-index: 0;
 }
 
@@ -155,7 +156,15 @@ strong {
 }
 
 .section-parallax h2 {
-  color: var(--color-cobalt);
+  color: #1C1018;
+}
+
+.section-parallax .step-number {
+  background-color: #1C1018;
+}
+
+.section-parallax .step-card {
+  border-top-color: #1C1018;
 }
 
 .section-blue .step-card,
@@ -291,12 +300,35 @@ strong {
 .hero {
   padding: 100px 0 72px;
   text-align: center;
-  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-platinum) 100%);
+  background-image: url('https://www.dropbox.com/scl/fi/9bji90x5ukejhrzi2xug7/ai-roadmap-workshop-background-min.png?rlkey=z36b1y3pr8ec5mj42ig5xn8zx&raw=1');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #1C1018;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(28, 16, 24, 0.3);
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
   max-width: 800px;
   margin: 0 auto 1.25rem;
+  color: var(--color-white);
 }
 
 .hero-sub {
@@ -304,7 +336,7 @@ strong {
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 0.01em;
-  color: var(--color-black);
+  color: var(--color-white);
   max-width: 660px;
   margin: 0 auto 2rem;
   line-height: 1.55;
@@ -312,6 +344,10 @@ strong {
 
 .hero-cta-group {
   margin-bottom: 2rem;
+}
+
+.hero-cta-group .cta-microcopy {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Hero Trust Strip */
@@ -330,16 +366,16 @@ strong {
   font-family: var(--font-sub);
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--color-black);
-  opacity: 0.7;
+  color: var(--color-white);
+  opacity: 0.9;
 }
 
 .trust-divider {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: var(--color-black);
-  opacity: 0.3;
+  background-color: var(--color-white);
+  opacity: 0.5;
 }
 
 .check-icon--sm {
